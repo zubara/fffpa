@@ -8,3 +8,7 @@
 3. A dialog is opened. Click Install.
 4. Once installed, the app is added to the MATLAB APPs toolstrip.
 
+
+# Please cite
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667731.svg)](https://doi.org/10.5281/zenodo.3667731)
+
