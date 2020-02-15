@@ -9,6 +9,9 @@
 4. Once installed, the app is added to the MATLAB APPs toolstrip.
 
 
+# Documentation
+Documentation in progress. 
+
 # Please cite
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667731.svg)](https://doi.org/10.5281/zenodo.3667731)
 
