@@ -3,7 +3,7 @@
 # FFFPA: Fast-forward firing pattern analysis
 
 ## Installation
-1.	Installation requires MATLAB 2018a or newer with Signal Processing and Curve Fitting toolboxes 
+1.	Installation requires MATLAB 2018b or newer with Signal Processing and Curve Fitting toolboxes 
 2.	Download FFFPA plugin from https://github.com/zubara/fffpa and unzip it to a local directory.
 3.	Double-click on ‘fffpa.mlappinstall’ file from MATLAB file explorer.
 4.	Click “Install” in the opened dialog window.
