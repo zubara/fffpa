@@ -1,27 +1,36 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1769897571" file="C:\Users\Ivan\projects\apcea\fffpa.prj" location="C:\Users\Ivan\projects\apcea" name="fffpa" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1115279327" file="C:\Users\ipzub\projs\fffpa\fffpa.prj" location="C:\Users\ipzub\projs\fffpa" name="fffpa" target="target.mlapps" target-name="Package App">
     <param.appname>fffpa</param.appname>
     <param.authnamewatermark>Ivan Zubarev</param.authnamewatermark>
     <param.email>ivan.zubarev@aalto.fi</param.email>
     <param.company>Aalto University</param.company>
-    <param.icon />
-    <param.icons />
+    <param.icon>${PROJECT_ROOT}\fffpa_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\fffpa_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\fffpa_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\fffpa_resources\icon_16.png</file>
+    </param.icons>
     <param.summary>Fast-Forward Firing Pattern Analysis</param.summary>
     <param.description>Install by clicking on the fffpa.mlappinstall file from Matlab file explorer.  The app will appear on matlab apps tab.</param.description>
-    <param.screenshot>C:\Users\Ivan\Desktop\screenshot.png</param.screenshot>
-    <param.version>0.9</param.version>
-    <param.products.name />
-    <param.products.id />
-    <param.products.version />
+    <param.screenshot>${PROJECT_ROOT}\fffpa_resources\screen.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>Curve Fitting Toolbox</item>
+      <item>Signal Processing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>60</item>
+      <item>8</item>
+    </param.products.id>
+    <param.products.version>
+      <item>3.5.8</item>
+      <item>8.1</item>
+    </param.products.version>
     <param.platforms />
-    <param.output>C:\Users\Ivan\projects\apcea</param.output>
+    <param.output>C:\Users\ipzub\projs\fffpa</param.output>
     <param.guid>ae6093a7-e448-4f54-854f-69adbdbb77aa</param.guid>
     <unset>
-      <param.icon />
-      <param.icons />
-      <param.products.name />
-      <param.products.id />
-      <param.products.version />
+      <param.version />
       <param.platforms />
       <param.output />
     </unset>
@@ -29,29 +38,24 @@
       <file>${PROJECT_ROOT}\fffpa.mlapp</file>
     </fileset.main>
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\abfload.m</file>
-      <file>${PROJECT_ROOT}\APanalysis.m</file>
-      <file>${PROJECT_ROOT}\compute_features.m</file>
-      <file>${PROJECT_ROOT}\plot_trace.m</file>
-      <file>${PROJECT_ROOT}\prepare_cell_data.m</file>
-      <file>${PROJECT_ROOT}\prepare_sweep_results.m</file>
+      <file>${PROJECT_ROOT}\src\abfload.m</file>
+      <file>${PROJECT_ROOT}\src\APanalysis.m</file>
+      <file>${PROJECT_ROOT}\src\compute_features.m</file>
+      <file>${PROJECT_ROOT}\src\plot_trace.m</file>
+      <file>${PROJECT_ROOT}\src\prepare_cell_data.m</file>
+      <file>${PROJECT_ROOT}\src\prepare_sweep_results.m</file>
     </fileset.depfun>
-    <fileset.resources />
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\fffpa_resources</file>
+    </fileset.resources>
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\Ivan\projects" name="apcea" optional="false">C:\Users\Ivan\projects\apcea</file>
+      <file location="C:\Users\ipzub\projs" name="fffpa" optional="false">C:\Users\ipzub\projs\fffpa</file>
     </build-deliverables>
     <workflow />
     <matlab>
       <root>C:\Program Files\MATLAB\R2018b</root>
-      <toolboxes>
-        <toolbox name="fixedpoint" />
-      </toolboxes>
-      <toolbox>
-        <fixedpoint>
-          <enabled>true</enabled>
-        </fixedpoint>
-      </toolbox>
+      <toolboxes />
     </matlab>
     <platform>
       <unix>false</unix>
@@ -62,7 +66,7 @@
       <vista>false</vista>
       <linux>false</linux>
       <solaris>false</solaris>
-      <osver>6.3</osver>
+      <osver>10.0</osver>
       <os32>false</os32>
       <os64>true</os64>
       <arch>win64</arch>
