@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1115279327" file="C:\Users\ipzub\projs\fffpa\fffpa.prj" location="C:\Users\ipzub\projs\fffpa" name="fffpa" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1922787160" file="C:\Users\ipzub\projs\fffpa\fffpa.prj" location="C:\Users\ipzub\projs\fffpa" name="fffpa" target="target.mlapps" target-name="Package App">
     <param.appname>fffpa</param.appname>
     <param.authnamewatermark>Ivan Zubarev</param.authnamewatermark>
     <param.email>ivan.zubarev@aalto.fi</param.email>

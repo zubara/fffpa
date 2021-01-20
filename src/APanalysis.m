@@ -1,4 +1,4 @@
-function [cell, traces]=APanalysis(filename, current_start, current_stop, opt)
+function [cell, traces]=APanalysis(filename, opt)
 %Usage
 %
 %Input arguments:
@@ -58,11 +58,14 @@ function [cell, traces]=APanalysis(filename, current_start, current_stop, opt)
 cell = struct(); % parameters of the cell
 cell.sweeps = struct();
 
+current_start = opt.current_start;
+current_stop = opt.current_stop;
+
 cell.filename = filename; 
 fs = 1e6/si; % Hz (check header)
 t_scale = 1e-3*fs; %milliseconds
 if t_scale ~= opt.t_scale
-    disp('WARING! Check sampling rate!!')
+    disp('WARNING! Check sampling rate!!!')
     return
 end
 cell.t_scale = t_scale;
@@ -147,9 +150,9 @@ end
 %regression coefficient between the injected current and
 %mean membrane voltage in sweeps starting from 100mV until first spike 
 %computed over the last 50 ms of current step
-if strcmp(opt.inj_curr0,'auto') == 1
+if opt.inj_curr_channel == 1
     current_steps = round(squeeze(mean(traces(current_start:current_stop,2,:),1)));
-else
+elseif opt.inj_curr_channel == 0
     last_step = opt.inj_curr0+opt.inj_curr_incr*(size(traces,3) - 1);
     current_steps = (opt.inj_curr0:opt.inj_curr_incr:last_step)';
 end
@@ -223,10 +226,12 @@ for j = 1:length(sweeps_of_interest)
 
       if peak_isi(1)/first_spike_lat > 5 && peak_isi(1) > median(peak_isi) && first_spike_lat < 30*t_scale
             %disp('DELAYED FIRING CELL WITH EARLY SPIKE!')
-            peak_idx = peak_idx(2:end);
-            peak_isi = peak_isi(2:end);
-            count = count-1;
-            peak_volt = peak_volt(2:end);
+            if opt.reject_early_spikes == 1
+                peak_idx = peak_idx(2:end);
+                peak_isi = peak_isi(2:end);
+                count = count-1;
+                peak_volt = peak_volt(2:end);
+            end
       end
           
       th_latency = zeros(count,1);
