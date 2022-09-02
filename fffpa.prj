@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1922787160" file="C:\Users\ipzub\projs\fffpa\fffpa.prj" location="C:\Users\ipzub\projs\fffpa" name="fffpa" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="2366336751" file="C:\Users\ipzub\projs\fffpa\fffpa.prj" location="C:\Users\ipzub\projs\fffpa" name="fffpa" target="target.mlapps" target-name="Package App">
     <param.appname>fffpa</param.appname>
     <param.authnamewatermark>Ivan Zubarev</param.authnamewatermark>
     <param.email>ivan.zubarev@aalto.fi</param.email>
@@ -37,14 +37,7 @@
     <fileset.main>
       <file>${PROJECT_ROOT}\fffpa.mlapp</file>
     </fileset.main>
-    <fileset.depfun>
-      <file>${PROJECT_ROOT}\src\abfload.m</file>
-      <file>${PROJECT_ROOT}\src\APanalysis.m</file>
-      <file>${PROJECT_ROOT}\src\compute_features.m</file>
-      <file>${PROJECT_ROOT}\src\plot_trace.m</file>
-      <file>${PROJECT_ROOT}\src\prepare_cell_data.m</file>
-      <file>${PROJECT_ROOT}\src\prepare_sweep_results.m</file>
-    </fileset.depfun>
+    <fileset.depfun />
     <fileset.resources>
       <file>${PROJECT_ROOT}\fffpa_resources</file>
     </fileset.resources>

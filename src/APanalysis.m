@@ -53,7 +53,7 @@ function [cell, traces]=APanalysis(filename, opt)
 
 % Load data from .abf file. Using newer version abf2load:
 [traces,si] = abfload(filename,'start',1,'stop','e');
-
+traces(:,1,:) = opt.input_scaler * traces(:,1,:);
 %% *********************************************************************
 cell = struct(); % parameters of the cell
 cell.sweeps = struct();
